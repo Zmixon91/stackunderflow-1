@@ -64,44 +64,20 @@
     <div class="dashInput">
         <label>Github: </label>
         <div>
-            <input type="text" placeholder="github profile Name">
+            <input ng-model="$rootScope.member.github" type="text" placeholder="github profile Name">
         </div>
-<<<<<<< HEAD
-        <div class="dashInput">
-            <label>Github: </label>
-            <div>
-                <input ng-model="$rootScope.member.github" type="text" placeholder="github profile Name">
-            </div>
-        </div>
-        <div class="dashInput">
-            <label>Web url: </label>
-            <div>
-                <input ng-model="$rootScope.member.websiteUrl" type="text" placeholder="Personal web address">
-            </div>
-        </div>
-        <div class="dashInput">
-            <label>Twitter: </label>
-            <div>
-                <input ng-model="$rootScope.member.twitterHandle" type="text" placeholder="Twitter Handle">
-            </div>
-        </div>
-    </div>
-<button type="submit">Save changes</button>
-=======
     </div>
     <div class="dashInput">
         <label>Web url: </label>
         <div>
-            <input type="text" placeholder="Personal web address">
+            <input ng-model="$rootScope.member.websiteUrl" type="text" placeholder="Personal web address">
         </div>
     </div>
     <div class="dashInput">
         <label>Twitter: </label>
         <div>
-            <input type="text" placeholder="Twitter Handle">
+            <input ng-model="$rootScope.member.twitterHandle" type="text" placeholder="Twitter Handle">
         </div>
     </div>
-    </div>
-
->>>>>>> 5febb8bd7b00a6f8c68f5b486252b4f2af632194
+    <button type="submit">Save changes</button>
 </form>
