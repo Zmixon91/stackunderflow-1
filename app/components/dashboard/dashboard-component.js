@@ -8,5 +8,8 @@ app.controller('DashboardController', function($rootScope, $scope){
 	 * Don't forget to call $rootScope.member.$save() after making changes to the $rootScope.member object
 	 * 
 	 * */
-	
+	$scope.updateProfile = function () {
+        console.log($rootScope.member);
+    };
+    
 });
