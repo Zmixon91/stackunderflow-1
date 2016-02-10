@@ -6,8 +6,7 @@
 <p>For the MemberObject Schema look at the comments on this file</p>
 
 <!--
-	
-	Members are requesting a form where they can edit their memberObject.
+    Members are requesting a form where they can edit their memberObject.
 	items denoted with ** should be stored on the memberObject
 	howerever the edit form should not allow the Member to change these values 
 	
@@ -81,3 +80,36 @@
     </div>
     <button type="submit">Save changes</button>
 </form>
+<div>
+    <div>Account Created On: {{member.accountCreated}}</div>
+    <div> Number of upVotes: {{member.upVotes}}</div>
+    <div>Number of downVotes: {{member.downVotes}}</div>
+    <div> Your current reputation is: {{member.reputation}} </div>
+    <div> The questions you have posted are :
+        <ul>
+            <li ng-repeat="question in member.questions">
+                {{question}}
+            </li>
+        </ul>
+    </div>
+    <div>The answers you have posted are:
+        <ul>
+            <li ng-repeat="answer in member.answers">
+                {{answer}}
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li ng-repeat="comment in member.comments">
+                {{comment}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+**questions: [questionId], **answers: [answerId], **comments: [commentId]
