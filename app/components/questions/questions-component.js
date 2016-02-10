@@ -9,7 +9,7 @@ app.controller('QuestionsController', function($rootScope, $scope, DataService){
 	
 	/**
 	 * $scope.addQuestion = function(newQuestion){
-	 * 	newQuestion.memberId = $rootScope.member.uid;
+	 * 	newQuestion.memberId = $rootScope.member.$ID;
 	 * 	$scope.questions.$add(newQuestion).then(function(ref){
 	 * 	  //Add the newly added question to the member object	
 	 * 	  $rootScope.member.questions = $rootScope.member.questions || {};
@@ -53,7 +53,7 @@ app.controller('QuestionController', function($rootScope, $scope, question, comm
 	 * 
 	 * think of it this way 
 	 * 
-	 * $scope.question.votes[$rootScope.member.uid] = 1 || -1
+	 * $scope.question.votes[$rootScope.member.$ID] = 1 || -1
 	 * 
 	 * This logic here should help keep your voteCount on track
 	 * $scope.question.voteCount = 0;
@@ -66,11 +66,14 @@ app.controller('QuestionController', function($rootScope, $scope, question, comm
 	 * */
 	$scope.question = question;
 	$scope.comments = comments;
-	$scope.responses = responses;
-	
+	$scope.answers = responses;
+    
+    
+    
+
 	/**
 	 * $scope.addComment = function(newQuestion){
-	 * 	newComment.memberId = $rootScope.member.uid;
+	 * 	newComment.memberId = $rootScope.member.$ID;
 	 * 	$scope.comments.$add(newQuestion).then(function(ref){
 	 * 	  //Add the newly added comment to the member object	
 	 * 	  $rootScope.member.comments = $rootScope.member.comments || {};

@@ -9,3 +9,22 @@
 <p>Only the member who posted the the questions/answers/comments can edit their content</p>
 <p>A member may only upvote the questions/answers/comments once.</p>
 <p>A member can change their vote to either up or down but may not vote both ways.</p>
+
+</br></br></br>
+<h2>{{question.title}}</h2>
+<h3>Summary: {{question.body}}</h3>
+<div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="answer in answers">
+        <p>Answer: {{answer.body}}</P>
+        </li>
+    </ul>
+</div>
+<div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="comment in comments">
+            <p>Comment: {{comment.body}}</P>
+        </li>
+    </ul>
+</div>
+

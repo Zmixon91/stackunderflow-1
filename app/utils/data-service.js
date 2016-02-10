@@ -17,7 +17,7 @@ app.service('DataService', function($firebaseArray, $firebaseObject, CONSTANTS){
 	}
 	
 	this.getResponses = function(id){
-		return $firebaseArray(new Firebase(CONSTANTS.questions + id + '/responses'));
+		return $firebaseArray(new Firebase(CONSTANTS.questions + id + '/answers'));
 	}
 	
 });
