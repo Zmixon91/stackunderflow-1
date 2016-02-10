@@ -82,32 +82,28 @@
 </form>
 <div>
     <div>Account Created On: {{member.accountCreated}}</div>
-    <div> Number of upVotes: {{member.upVotes}}</div>
+    <div>Number of upVotes: {{member.upVotes}}</div>
     <div>Number of downVotes: {{member.downVotes}}</div>
-    <div> Your current reputation is: {{member.reputation}} </div>
-    <div> The questions you have posted are :
+    <div>Your current reputation is: {{member.reputation}} </div>
+    <div>The questions you have posted are :
         <ul>
             <li ng-repeat="question in member.questions">
-                {{question}}
+                {{question.title}}
             </li>
         </ul>
     </div>
     <div>The answers you have posted are:
         <ul>
             <li ng-repeat="answer in member.answers">
-                {{answer}}
+                {{answer.title}}
             </li>
         </ul>
     </div>
-    <div>
+    <div>The comments you have posted are:
         <ul>
             <li ng-repeat="comment in member.comments">
-                {{comment}}
+                {{comment.title}}
             </li>
         </ul>
     </div>
 </div>
-
-
-
-
