@@ -9,6 +9,7 @@ app.controller('DashboardController', function($rootScope, $scope){
 	 * 
 	 * */
 	$scope.updateProfile = function () {
+        $rootScope.member.$save();
         console.log($rootScope.member);
     };
     
