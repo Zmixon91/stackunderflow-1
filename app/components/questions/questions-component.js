@@ -5,7 +5,7 @@ app.controller('QuestionsController', function($rootScope, $scope, DataService){
 	 * https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-firebasearray
 	 * */
 	$scope.tags = DataService.getTags();
-	$scope.questions = DataService.getQuestions();
+$scope.questions = DataService.getQuestions();
 	
 	/**
 	 * $scope.addQuestion = function(newQuestion){
@@ -31,18 +31,7 @@ app.controller('QuestionsController', function($rootScope, $scope, DataService){
 	 *	tags: [tags] 
 	 * } 
 	 */
-   // This is for the vote increment and decreiment
-    $scope.incVote = function (obj) {
-        obj.vote++;
-        $scope.questions.$save(obj);
-    }
 
-    $scope.decVote = function (obj) {
-        obj.vote--;
-        $scope.questions.$save(obj);
-    }
-
-    // end vote stuff
 	
 });
 
@@ -52,7 +41,7 @@ app.controller('QuestionController', function($rootScope, $scope, question, comm
 	 * come from the question route resolve,
 	 * Remember that ui-router ensures that the resolve functions finish before loading up the controller
 	 *  
-	 * $scope.question is $firebaseObject from AngularFire 
+    * $scope.question is $firebaseObject from AngularFire 
 	 * To see the methods at your disposal look here
 	 * https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-firebaseobject
 	 * 
