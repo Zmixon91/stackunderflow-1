@@ -16,5 +16,15 @@
     margin: 25px
 }
 .answerPresent{
-    background-color: goldenrod
+    background-color: goldenrod;
 }
+.question{
+    display: inline;
+    
+}
+.text{
+    font-size: 29px;
+}
+.buffer{
+    margin: 10px; 
+ }
