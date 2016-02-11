@@ -31,7 +31,19 @@ $scope.questions = DataService.getQuestions();
 	 *	tags: [tags] 
 	 * } 
 	 */
+    
+    // This is for the vote increment and decreiment
+    $scope.incVote = function (obj) {
+        obj.vote++;
+        $scope.questions.$save(obj);
+    }
 
+    $scope.decVote = function (obj) {
+        obj.vote--;
+        $scope.questions.$save(obj);
+    }
+
+    // end vote stuff
 	
 });
 
