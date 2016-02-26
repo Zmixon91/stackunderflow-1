@@ -11,12 +11,10 @@
 <div ng-repeat="question in questions">
 
     <div class=" row buffer" ng-class="{'answerPresent': question.answers}">
-        <span class="pull-left">
-        <a ng-click="incVote(question)" class="glyphicon glyphicon-chevron-up"></a>
+        <span class="pull-left"> <a ng-click="incVote(question)" class="glyphicon glyphicon-chevron-up"></a>
         </br> {{question.vote}}</br>
         <a ng-click="decVote(question)" class="glyphicon glyphicon-chevron-down"></a>
-        </span> answer count:{{question.answers.length}}
-        <a class="text" ng-href="/#/questions/{{question.$id}}"> {{question.title}} </a>
+        </span> answer count:{{question.answers.length}} <a class="text" ng-href="/#/questions/{{question.$id}}"> {{question.title}} </a>
     </div>
 
 </div>
